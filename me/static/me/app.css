@@ -1,0 +1,136 @@
+.entire_page {
+    font-family: Arial;
+    background-color: #1d3030;
+}
+
+body {
+color: #ffffe6;
+}
+
+.menu{
+position: fixed;
+left: 0px;
+top: 0px;
+list-style-type: none;
+}
+
+.menu li{
+margin-left: 30px;
+margin-top: 40px;
+font-size: 1.5em;
+}
+
+.menu a{
+ text-decoration: none;
+ color: #800080;
+}
+
+.presentation {
+    border-color: #ffffe6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    height: 90%;
+}
+
+.presentation img{
+    height: 300px;
+    border-radius: 50%;
+}
+.intro{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-size: 1.5em;
+}
+
+#main {
+width: 70%;
+margin-left: 14%;
+text-align: justify;
+}
+
+.section {
+margin-top: 80px;
+}
+
+#education-link {
+text-align: center;
+}
+
+#education-link a img {
+   height: 180px;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill-name {
+    font-size: 18px;
+    color: #800080;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background-color: #007acc; /* Couleur de la barre de progression */
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+
+.social-icons .linkedin i {
+    color: #0077b5;
+}
+
+.social-icons .whatsapp i {
+    color: #25d366;
+}
+
+.social-icons .instagram i {
+    color: #e1306c;
+}
+
+.social-icons .email i {
+    color: #d44638;
+}
+
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}

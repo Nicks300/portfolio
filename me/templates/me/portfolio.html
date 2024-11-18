@@ -1,0 +1,111 @@
+{% load static %}
+<html lang="en" class="entire_page">
+<head>
+    <meta charset="UTF-8">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="{% static 'me/app.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="menu_and_presentation">
+        <ul class="menu">
+            <li><a href="{% url 'portfolio' %}#home">Home</a></li>
+            <li><a href="{% url 'portfolio' %}#about">About</a></li>
+            <li><a href="{% url 'portfolio' %}#skills">Skills</a></li>
+            <li><a href="{% url 'portfolio' %}#lang">Languages</a></li>
+            <li><a href="{% url 'portfolio' %}#work">Work</a></li>
+            <li><a href="{% url 'portfolio' %}#contact">Contact</a></li>
+        </ul>
+
+        <div class="presentation"  id="home">
+            <img src="{% static 'images/profile_photo.jpg' %}">
+             <div class="intro">
+                <p>NICKSON PIERRE</p>
+                <p>Computer and control systems engineer | Software engineer.</p>
+            </div>
+         </div>
+    </div>
+
+    <div id="main">
+        <div id="about" class="section">
+            <h2>About</h2>
+            <p>I am a <strong>Computer and Control Systems Engineer</strong> and a passionate <strong>Software Engineer</strong>.
+        I have a deep interest in programming and am proficient in several programming languages including C, C++, Python, JavaScript, PHP, SQL, HTML and CSS.
+        My preferred programming languages are <strong>Python, C and C++</strong>.
+            </p>
+            <p>
+                I hold a <strong>Bachelor's degree in Computer Science and Control Systems</strong> from
+        Bauman Moscow State Technical University and a <strong>Software Engineering degree</strong>
+        from School 21 in Moscow.
+            </p>
+            <p>
+                 As a highly motivated, honest, and enthusiastic developer, I am always excited to write code, collaborate within a team, and perform under pressure.
+            </p>
+            <P id="education-link">
+                <a href="https://bmstu.ru/" target="_blank"><img src="{% static 'images/bauman.jpeg' %}"></a>
+                <a href="https://www.linkedin.com/school/21-school/" target="_blank"><img src="{% static 'images/school21.jpeg' %}"></a>
+            </P>
+        </div>
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <p>I have strong expertise in programming, with proficiency in languages such as Python, JavaScript, PHP, C, and C++.
+                My experience includes developing full-stack web applications using JavaScript, PHP, HTML, and CSS, leveraging frameworks like Django to deliver dynamic and robust solutions.
+                Beyond web development, I have also worked on data analysis projects utilizing libraries like NumPy.
+                I am committed to continuous learning and actively seek opportunities to broaden my skill set by exploring new languages and technologies.
+            </p>
+            <div class="skills-container">
+            {% for skill in skills %}
+                <div class="skill">
+                    <span class="skill-name">{{ skill.name }}</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: {{ skill.level }}%;">
+                            {{ skill.level }}%
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div id="lang" class="section">
+            <h2>Languages</h2>
+            <div class="skills-container">
+            {% for language in languages %}
+                <div class="skill">
+                    <span class="skill-name">{{ language.name }}</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: {{ language.level }}%;">
+                            {{ language.level }}%
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div id="work" class="section">
+            <h2>Work</h2>
+            <h3>EMADONI - co-founder and full-stack developer</h3>
+            <p>EMADONI is a e-commerce company, founded in 2021. This company is located in Haiti.</p>
+            <p>I worked at EMADONI as a full-stack developer using JavaScript (jQuery) for the front-end and
+            PHP, MySQL for the back-end.</p>
+        </div>
+        <div id="contact" class="section">
+            <h2>Contacts</h2>
+            <div class="social-icons">
+
+                <a href="https://www.linkedin.com/in/nickson-pierre-60b116290/" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/79777561141" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/pnick0101/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:nicksonpierreaugustin@gmail.com" class="email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
