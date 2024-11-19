@@ -118,6 +118,10 @@ text-align: center;
     color: #0077b5;
 }
 
+.social-icons .github i {
+    color: white;
+}
+
 .social-icons .whatsapp i {
     color: #25d366;
 }
