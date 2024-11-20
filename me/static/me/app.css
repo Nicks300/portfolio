@@ -154,6 +154,12 @@ text-align: center;
     height: 200px;
 }
 
+#main {
+width: 90%;
+margin-left: 5%;
+text-align: justify;
+}
+
  .skill-name {
     font-size: 18px;
     color: #b8860b;
